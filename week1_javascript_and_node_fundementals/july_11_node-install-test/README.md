@@ -55,4 +55,4 @@ using require and module.exports to share code between modules
 
 ## Links for today's work:
 * [Fat Arrows](https://github.com/martypdx/workshop-promises-fat-arrows/blob/master/fat-arrows.md)
-* [Repo](https://github.com/martypdx/install-node/) with today's example.
+* [Repo](https://github.com/martypdx/install-node-1/) with today's example.
