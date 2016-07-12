@@ -1,14 +1,24 @@
-const assert = require( 'assert' );
+const assert = require( 'chai' ).assert;
 const greeter = require( '../greeter' );
 
 describe( 'greeter', () => {
+
+	const match = /^hello world! /;
+	
 	it( 'creates greeting function', () => {
 		const greet = greeter( 'hello' );
-		assert.equal( greet( 'world' ), 'hello world!' );
+		const greeting = greet( 'world' );
+		assert.match( greeting, match );
+		assert.ok( greeting.replace( match, '' ).trim() );
 	});
 
 	it( 'uses "hello" as default greeting', () => {
 		const greet = greeter();
-		assert.equal( greet( 'world' ), 'hello world!' );
+		assert.match( greet( 'world' ), match );
+	});
+
+	it( 'no name greeting', () => {
+		const greet = greeter();
+		assert.match( greet(), /^hello !/ );
 	});
 });
