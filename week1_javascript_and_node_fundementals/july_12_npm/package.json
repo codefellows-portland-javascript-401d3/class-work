@@ -1,0 +1,22 @@
+{
+  "name": "july_12_npm",
+  "version": "1.0.0",
+  "description": "Build and Dependencies",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "npm run lint",
+    "test": "mocha",
+    "watch": "mocha -w",
+    "lint": "eslint **/*.js",
+    // not used here, for reference:
+    "watch": "chokidar '**/*.js' -i /node_modules/i -c 'npm test:mocha'"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "chokidar-cli": "^1.2.0",
+    "eslint": "^3.0.1",
+    "mocha": "^2.5.3"
+  },
+  "author": "Marty Nelson <marty@martypdx.com> (@martypdx)",
+  "license": "ISC"
+}

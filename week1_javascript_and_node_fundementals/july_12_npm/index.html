@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button id="clicker">click me</button>
+
+	<script>
+		var i = 0;
+		function countClicks() {
+			i++;
+			console.log( 'clicked', i, 'times' );
+		}
+		
+		countClicks();
+
+		document
+			.getElementById( 'clicker' )
+			.addEventListener( 'click', countClicks );
+	</script>
+</body>
+</html>
