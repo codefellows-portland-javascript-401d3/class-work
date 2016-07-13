@@ -10,19 +10,24 @@ console.log( result );
 
 function doSomeAsyncWork( input, callback ) {
 	setTimeout( () => {
+		if ( input === 'goodbye' ) return callback( 'goodbye not allowed' );
 		const output = input + 'work';
 		// how to communicate errors?
-		callback( output );
+		callback( null, output );
 	});
 }
 function valueIsBack( output ){
 	console.log( output );
 }
 
-doSomeAsyncWork( 'hello again', output => {
-	console.log( 'hello again', output );
+doSomeAsyncWork( 'hello again', ( err, output ) => {
+	if ( err ) console.error( err );
+	else {
+		console.log( 'hello again', output );
+	}
 });
 
-doSomeAsyncWork( 'goodbye', output => {
+doSomeAsyncWork( 'goodbye', ( err, output ) => {
+	if ( err ) return console.error( err );
 	console.log( 'goodbye', output );
 });
