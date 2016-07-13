@@ -34,8 +34,7 @@ function getFiles( directory, callback ) {
 				if ( err ) return callback( err );
 				const length = contents.push( content );
 				if ( length === files.length ) callback( null, contents );
-			})
-
+			});
 		});
 	})
 }

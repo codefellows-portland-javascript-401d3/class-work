@@ -1,6 +1,6 @@
 const fs = require( 'fs' );
 
-fs.readFile( 'README.md', ( err, data ) => {
+fs.readFile( './test/test-dir/bar.txt', ( err, data ) => {
 	console.log( data );
 })
 
