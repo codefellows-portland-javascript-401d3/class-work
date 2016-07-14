@@ -1,0 +1,22 @@
+{
+  "name": "july_14_event_emitters",
+  "version": "1.0.0",
+  "description": "![cf](http://i.imgur.com/7v5ASc8.png) Buffers, File System (fs), and Asynchronicity",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Marty Nelson <marty@martypdx.com> (@martypdx)",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3",
+    "rimraf": "^2.5.3"
+  },
+  "dependencies": {
+    "mkdirp": "^0.5.1"
+  }
+}
