@@ -24,8 +24,8 @@
 
 There are two labs today, and follow-ons to both labs tomorrow:
 
-* [TCP Chat Server](https://github.com/codefellows-portland-javascript-401d2/tcp-chat-server)
-* [HTTP Hello/Goodbye World](https://github.com/codefellows-portland-javascript-401d2/http-hello-goodbye-world)
+* [TCP Chat Server](https://github.com/codefellows-portland-javascript-401d3/tcp-chat-server)
+* [HTTP Hello/Goodbye World](https://github.com/codefellows-portland-javascript-401d3/http-hello-goodbye-world)
 
 ## Overview
 
