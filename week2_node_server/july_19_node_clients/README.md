@@ -7,7 +7,7 @@
 	same github PR url).
 	* __Do__ make individual canvas submissions
 * Use assertion libraries
-* Make sure library API is conscious, apart from test
+* Make sure library API is functional outside of test or cli use
 
 ## Today's Learning Objectives
 
