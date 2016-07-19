@@ -33,7 +33,7 @@ Part 2 on both labs:
 
 * [ Http Protocol explained ](http://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177)
 * Url
-	* http://bl.ocks.org/abernier/3070589
+	* [parts of url](http://bl.ocks.org/abernier/3070589)
 	* protocol
 	* hostname ( host + port )
 	* resource path
@@ -42,7 +42,7 @@ Part 2 on both labs:
 	* GET, POST, PUT, DELETE, PATCH
 	* plus more ...
 * REST
-	* https://spring.io/understanding/REST
+	* [understanding REST](https://spring.io/understanding/REST)
 	* Resources (nouns!)
 	* Part “art”
 * Headers
