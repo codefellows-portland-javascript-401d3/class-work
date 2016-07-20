@@ -1,14 +1,17 @@
 const http = require( 'http' );
 const fs = require( 'fs' );
 
-http.createServer( ( req, res ) => {
+module.exports = http.createServer( ( req, res ) => {
 	if ( req.url === '/dogs' ) {
 		res.writeHead( 302, {
   			'Location': '/'
 		});
 		res.end();
 	}
-	else if ( req.method === 'GET' )  fs.createReadStream( 'index.html' ).pipe( res )
+	else if ( req.method === 'GET' ) {
+		res.writeHead( 200, { 'Content-Type': 'text/html' } );
+		fs.createReadStream( 'index.html' ).pipe( res )
+	}	
 	else if( req.method === 'POST' ) {
 		let body = '';
 		req.on( 'data', chunk => body += chunk );
@@ -22,4 +25,4 @@ http.createServer( ( req, res ) => {
 		res.statusCode = 404
 		res.end( 'not found' );
 	}
-}).listen( 8000 );
+});
