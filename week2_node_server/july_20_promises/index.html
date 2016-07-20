@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Post some data!</title>
+</head>
+<body>
+	<form method="POST" onsubmit="postIt(); return false;">
+		<input name="name">
+		<input name="type">
+		<button type="submit">POST</button>
+	</form>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/superagent/2.1.0/superagent.min.js"></script>
+	<script>
+		function postIt() {
+			const data = {
+				name: document.querySelector( 'input[name=name]' ).value,
+				type: document.querySelector( 'input[name=type]' ).value
+			};
+
+			superagent
+				.post('/')
+				.send( data )
+				.end( ( err, res ) => {
+					alert( res.text );
+				});
+		}
+	</script>
+</body>
+</html>
