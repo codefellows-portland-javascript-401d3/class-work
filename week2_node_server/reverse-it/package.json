@@ -1,0 +1,14 @@
+{
+  "name": "reverse-it",
+  "version": "1.0.0",
+  "description": "reverse your string like pure magic",
+  "main": "./lib/reverse-it.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Marty Nelson <marty@martypdx.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^2.5.3"
+  }
+}

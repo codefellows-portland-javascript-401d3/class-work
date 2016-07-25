@@ -1,0 +1,15 @@
+{
+  "name": "july_21_use_reverse",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marty Nelson <marty@martypdx.com>",
+  "license": "ISC",
+  "dependencies": {
+    "july_21_our_npm": "file:///Users/marty/codefellows/d3-portland-javascript-401d3/class-work/week2_node_server/july_21_our_npm",
+    "reverse-it": "^1.0.0"
+  }
+}
