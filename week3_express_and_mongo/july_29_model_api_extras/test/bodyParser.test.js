@@ -11,7 +11,7 @@ function bodyParser( req, res, next ) {
 	});
 }
 
-describe.only( 'bodyParser', () => {
+describe( 'bodyParser', () => {
 
 	it( 'parse data', done => {
 		const post = { foo: 'FOO' };

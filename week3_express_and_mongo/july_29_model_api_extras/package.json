@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "DEBUG=myapp.* nodemon server.js",
-    "test": "mocha",
+    "test": "mocha",    
+    "test:debug": "mocha --debug-brk",
     "test:watch": "nodemon --exec mocha"
   },
   "author": "Marty Nelson <marty@martypdx.com>",
