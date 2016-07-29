@@ -18,8 +18,8 @@ module.exports = router
 			.catch( next );
 	})
 	.get( '/:id', ( req, res, next ) => {
-		Crew.findById( req.params.id )
-			.then( pirate => res.send( pirate ) )
+		Crew.getFullDetail( req.params.id )
+			.then( crew => res.send( crew ) )
 			.catch( next );
 	})
 	.delete( '/:id', ( req, res, next ) => {
