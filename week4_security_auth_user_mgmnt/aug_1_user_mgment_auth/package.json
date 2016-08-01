@@ -1,0 +1,29 @@
+{
+  "name": "user-management-auth",
+  "version": "1.0.0",
+  "description": "user management, authentication, tokens, authorization",
+  "main": "index.js",
+  "scripts": {
+    "start": "DEBUG=myapp.* nodemon server.js",
+    "test": "mocha",
+    "test:debug": "mocha --debug-brk",
+    "test:watch": "nodemon --exec mocha"
+  },
+  "author": "Marty Nelson <marty@martypdx.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.3.0",
+    "body-parser": "^1.15.2",
+    "debug": "^2.2.0",
+    "express": "^4.14.0",
+    "jsonwebtoken": "^7.1.7",
+    "mongoose": "^4.5.7",
+    "morgan": "^1.7.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "mocha": "^2.5.3",
+    "nodemon": "^1.9.2"
+  }
+}
