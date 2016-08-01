@@ -1,6 +1,6 @@
 const jwt = require( 'jsonwebtoken' );
 // This is our app secret that enables our tokens to be "untampered with"
-const sekrit = process.env.APP_SECRET || 'changemenow';
+const sekrit = process.env.APP_SECRET;
 
 module.exports = {
 	sign( user ) {

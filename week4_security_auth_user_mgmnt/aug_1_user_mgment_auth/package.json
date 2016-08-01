@@ -4,10 +4,19 @@
   "description": "user management, authentication, tokens, authorization",
   "main": "index.js",
   "scripts": {
-    "start": "DEBUG=myapp.* nodemon server.js",
+    "start": "node server.js",
+    "start:dev": "DEBUG=myapp.* nodemon server.js",
     "test": "mocha",
     "test:debug": "mocha --debug-brk",
     "test:watch": "nodemon --exec mocha"
+  },  
+  "scripts_with_bash_env": {
+    "//": "env $(cat .env) loads .env variables",
+    "start": "node server.js",
+    "start:dev": "env $(cat .env) DEBUG=myapp.* nodemon server.js",
+    "test": "env $(cat .env) mocha",
+    "test:debug": "env $(cat .env) mocha --debug-brk",
+    "test:watch": "env $(cat .env) nodemon --exec mocha"
   },
   "author": "Marty Nelson <marty@martypdx.com>",
   "license": "ISC",
@@ -15,6 +24,7 @@
     "bcryptjs": "^2.3.0",
     "body-parser": "^1.15.2",
     "debug": "^2.2.0",
+    "dotenv": "^2.0.0",
     "express": "^4.14.0",
     "jsonwebtoken": "^7.1.7",
     "mongoose": "^4.5.7",

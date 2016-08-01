@@ -2,7 +2,7 @@ const mongoose = require( 'mongoose' );
 const debug = require( 'debug' )( 'myapp.dbconnect' );
 
 // we need a URI that points to our database
-const dbURI = process.env.MONGODB_URI || 'mongodb://localhost/pirates'; 
+const dbURI = process.env.MONGODB_URI; 
 
 mongoose.Promise = Promise;
 mongoose.connect( dbURI ); 
