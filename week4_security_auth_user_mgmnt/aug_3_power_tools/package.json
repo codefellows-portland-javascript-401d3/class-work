@@ -5,13 +5,11 @@
   "main": "index.js",
   "scripts": {
     "//": "env $(cat .env) loads .env variables",
-    "start": "node server.js",
+    "start": "env $(cat .env) node server.js",
     "start:dev": "env $(cat .env) DEBUG=myapp.* nodemon server.js",
     "test": "env $(cat .env) mocha test/**/*.js",
     "test:debug": "env $(cat .env) DEBUG=myapp.* mocha --debug-brk test/**/*.js",
-    "test:watch": "env $(cat .env) nodemon --exec 'mocha test/**/*.js'",
-    "build": "rollup -c" ,
-    "build:watch": "nodemon --watch src -e js,html --exec 'npm run build'" 
+    "test:watch": "env $(cat .env) nodemon --exec 'mocha test/**/*.js'"
   },
   "author": "Marty Nelson <marty@martypdx.com>",
   "license": "ISC",
@@ -21,6 +19,7 @@
     "debug": "^2.2.0",
     "dotenv": "^2.0.0",
     "express": "^4.14.0",
+    "express-restify-mongoose": "^4.1.1",
     "jsonwebtoken": "^7.1.7",
     "mongoose": "^4.5.7",
     "morgan": "^1.7.0"
@@ -29,9 +28,6 @@
     "chai": "^3.5.0",
     "chai-http": "^3.0.0",
     "mocha": "^2.5.3",
-    "nodemon": "^1.9.2",
-    "ractive": "^0.7.3",
-    "rollup": "^0.34.3",
-    "rollup-plugin-ractive": "^1.2.1"
+    "nodemon": "^1.9.2"
   }
 }

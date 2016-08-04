@@ -1,0 +1,20 @@
+<h2>Pirate Crews</h2>
+
+<ul>
+    {{#each crews}}
+    <li>{{name}}</li>
+    {{/each}}
+</ul>
+
+<script>
+component.exports = {
+    oninit() {
+        const token = this.get( 'user.token' );
+        const headers = new Headers({ token });
+
+        fetch( '/api/crews', { headers } )
+            .then( res => res.json() )
+            .then( crews => this.set({ crews }) );
+    }
+};
+</script>

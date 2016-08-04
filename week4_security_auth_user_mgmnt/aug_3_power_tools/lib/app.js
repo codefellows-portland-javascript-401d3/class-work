@@ -15,15 +15,12 @@ const me = require( './routes/me' );
 const users = require( './routes/users' );
 
 // setup
-app.use( logger );
-const appDir = path.resolve( __dirname, '../public' );
-app.use( express.static( appDir ) );
-
+// app.use( logger );
 
 // routes go here
 app.use( '/api/auth', auth )
 app.use( '/api/crews', ensureAuth, crews );
-app.use( '/api/pirates', ensureAuth, pirates );
+app.use( pirates );
 app.use( '/api/users', ensureAuth, me );
 app.use( '/api/users', ensureAuth, ensureRole( 'admin' ), users );
 

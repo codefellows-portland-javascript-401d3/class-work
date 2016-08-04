@@ -3,6 +3,15 @@ const bodyParser = require( 'body-parser' ).json();
 const User = require( '../models/user' );
 
 router
+	.get( '/me', ( req, res, next ) => {
+		User.findById( req.user.id )
+			.select( '_id username roles')
+			.then( user => {
+				console.log( req.user.id, user )
+				res.send( user )
+			})
+			.catch( next )
+	})
 	.post( '/:userId/roles/:role', ( req, res, next ) => {
 		User.findById( req.params.userId )
 			.then( user => {

@@ -1,0 +1,22 @@
+<link rel='ractive' href='./crews.html'>
+<link rel='ractive' href='./pirates.html'>
+<link rel='ractive' href='./auth.html'>
+
+<h1>Pirates!</h1>
+
+
+{{#if user}}
+    <h2>Hello {{user.username}}</h2>
+    <crews></crews>
+    <pirates></pirates>
+{{else}}
+    <auth user="{{user}}"></auth>
+{{/if}}
+
+<script>
+component.exports = {
+    data: {
+        user: null
+    }
+};
+</script>

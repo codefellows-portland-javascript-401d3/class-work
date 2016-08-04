@@ -2,7 +2,6 @@ const router = require( 'express' ).Router();
 const jsonParser = require( 'body-parser' ).json();
 const User = require( '../models/user' );
 const token = require( '../auth/token' );
-const ensureAuth = require( '../auth/ensureAuth' )();
 
 router.post( '/signup', jsonParser, ( req, res, next ) => {
 	// req.body will have username and password properties
@@ -56,10 +55,6 @@ router.post('/signin', jsonParser, ( req, res, next ) => {
 		// send back as response
 		.then( token => res.send({ token }) )
 		.catch( next );
-});
-
-router.get( '/verify', ensureAuth, ( req, res ) => {
-	res.status( 200 ).send( { success: true } );
 });
 
 module.exports = router;
