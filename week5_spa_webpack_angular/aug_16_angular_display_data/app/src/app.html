@@ -1,0 +1,29 @@
+<h1>Lots o controllers</h1>
+<div ng-controller="counter">
+	#{{count}}
+	<button ng-click="add()">Add</button>
+	<button ng-click="subtract()">Subtract</button>
+	<div>
+		Half is:{{ half(count) }}
+	</div>
+</div>
+
+<div ng-controller="cowsay">
+	<select ng-model="type" ng-options="type for type in types"></select>
+	<label>
+		<input type="radio" ng-model="method" value="say">
+		Say
+	</label>
+	<label>
+		<input type="radio" ng-model="method" value="think">
+		Think
+	</label>
+	<label><input ng-model="text"></label>
+	<pre>{{say(type, method, text)}}</pre>
+
+	<ul>
+		<li ng-show="type.startsWith('d')" ng-repeat="type in types">
+			{{type}}
+		</li>
+	</ul>
+</div>
