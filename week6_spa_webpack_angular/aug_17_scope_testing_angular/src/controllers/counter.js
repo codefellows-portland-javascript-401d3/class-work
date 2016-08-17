@@ -1,6 +1,6 @@
 
 export default function counter( $scope ) {
-    $scope.count = 0;
+    $scope.count = 1;
 
     $scope.add = function() {
         $scope.count++;
