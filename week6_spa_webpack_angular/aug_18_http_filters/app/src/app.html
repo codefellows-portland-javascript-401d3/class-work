@@ -1,0 +1,53 @@
+<h1>Welcome to the Zoo...</h1>
+
+<div ng-controller="monkeys">
+	{{ 1 | typeName }}
+	<div style="color: red;" ng-if="error">{{error}}</div>
+	<div ng-if="loaded">
+		<div>
+			<div>
+				Name: <input ng-model="search.name">
+			</div>
+			<div>Type:
+				<select ng-model="search.type" ng-options="type.id as type.name for type in types">
+					<option value="">All</option>	
+				</select> 
+			</div>
+		</div>
+		{{ search }}
+		<ol>
+			<li ng-repeat="monkey in monkeys | filter: search ">
+				{{ monkey.name }} the {{ monkey.type | typeName }} 
+			</li>
+		</ol>
+	</div>
+	<div ng-if="!loaded">
+		loading...
+	</div>
+</div>
+
+<!--<div ng-controller="monkeys">
+	<h3>{{ monkeys.length }} monkeys</h3>
+	<div ng-if="monkeys != null">
+		<div ng-init="search = {}">
+			<div>
+				Name: <input ng-model="search.name">
+			</div>
+			<div>Type:
+				<select ng-model="search.type" ng-options="type.id as type.name for type in types">
+					<option value="?">All</option>	
+				</select> 
+			</div>
+		</div>
+		{{ search }}
+		<ol>
+			<li ng-repeat="monkey in monkeys | filter: search">
+				{{ monkey.name }} the {{ getType(monkey.type) | uppercase }} 
+				<span ng-if='monkey.type === 3'>FTW!</span>
+			</li>
+		</ol>
+	</div>
+	<div ng-if="monkeys == null">
+		loading...
+	</div>
+</div>-->
