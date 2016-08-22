@@ -1,0 +1,23 @@
+<h1>Directives and Components</h1>
+
+<h2>Directive with link function</h2>
+<label>this is a select in main template</label>
+
+<select ng-init="color = 'darksalmon'" ng-model="color" >
+	<option value="darksalmon">dark</option>
+	<option value="yellow">light</option>
+	<option value="lightsteelblue">regular</option>
+</select>
+<br>
+<br>
+<div simple-color="color" foo="bar">Here is the directive</div>
+
+
+<h2>Components</h2>
+<h3>hello world</h3>
+	<div ng-init="name = 'mars'">name: <input ng-model="name"></div>
+	<div ng-init="secondName = 'venus'">secondName: <input ng-model="secondName"></div>
+	<hello-world greeting="hello" name="name" second-name="secondName"></hello-world>
+</h3>
+<h3>list</h3>
+<movies movies="movies"></movies>
