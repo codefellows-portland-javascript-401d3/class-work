@@ -1,0 +1,9 @@
+@import 'colors';
+
+input[type=checkbox] {
+    color: $primary;
+}
+
+input[type=text] {
+    color: $secondary;
+}

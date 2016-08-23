@@ -1,0 +1,8 @@
+
+<ul>
+    <li ng-repeat="movie in $ctrl.movies">
+        <movie movie="movie" remove="$ctrl.remove(movie)"></movie>
+    </li>
+</ul>
+
+<add-new-movie add="$ctrl.add(movie)"></add-new-movie>
