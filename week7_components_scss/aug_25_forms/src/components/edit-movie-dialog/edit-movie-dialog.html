@@ -1,0 +1,48 @@
+<!--<md-dialog aria-label="Edit Movie">-->
+    <md-dialog-content md-theme="docs-dark" layout-gt-sm="row" layout-padding>
+        <md-content md-theme="docs-dark" layout-gt-sm="row" layout-padding>
+            <div>
+                
+                <form name="editMovie"
+                      novalidate>
+                    <md-input-container>
+                        <label>Title:</label>
+                        <input 
+                            name="title"
+                            required
+                            ng-model="$ctrl.movie.title">
+                    </md-input-container>
+                    <md-input-container>
+                        <label>Genre:</label>
+                        <input
+                            required 
+                            ng-model="$ctrl.movie.genre">
+                        <div ng-messages="editMovie.stars.$error" role="alert">
+                            <ng-message when="required">yo! genre is required</ng-message>
+                        </div>
+                    </md-input-container>
+                    <md-input-container>
+                        <label>Stars:</label>
+                        <input
+                            name="stars"
+                            required
+                            ng-pattern="/^\d+$/"
+                            ng-model="$ctrl.movie.stars">
+                        <div ng-messages="editMovie.stars.$error" role="alert">
+                            <ng-message when="required">yo! star rating is required</ng-message>
+                            <ng-message when="pattern">hey, number of starts should be, well uh, a number</ng-message>
+                        </div>
+                    </md-input-container>
+                </form>
+            </div>
+        </md-content>
+    </md-dialog-content>
+    <md-dialog-actions>
+        <md-button ng-click="$ctrl.cancel()" class="md-primary">
+            Cancel
+        </md-button>
+        <md-button ng-click="$ctrl.save()" class="md-primary">
+            Save
+        </md-button>
+    </md-dialog-actions>
+<!--</md-dialog>-->
