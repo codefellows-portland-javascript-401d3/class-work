@@ -1,0 +1,14 @@
+
+<section ng-if="$ctrl.movies">
+    <md-list>
+        <md-list-item ng-repeat="movie in $ctrl.movies">
+            <movie movie="movie" remove="$ctrl.remove(movie)"></movie>
+        </md-list-item>
+    </md-list>
+    <new-movie-form add="$ctrl.add"></new-movie-form>
+</section>
+
+<section ng-if="!$ctrl.movies">
+    Loading...
+</section>
+

@@ -1,3 +1,5 @@
+import ace from 'ace-builds';
+console.log(ace);
 export default function simpleColor() {
     return {
         restrict: 'A',

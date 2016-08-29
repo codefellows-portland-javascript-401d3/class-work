@@ -1,0 +1,21 @@
+@import 'colors';
+@import 'media';
+
+:local(.user) {
+    
+    @extend .base-media;
+    height: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    color: $secondary;
+    
+
+    span {
+        font-weight: bolder;
+        
+        &:hover {
+            color: darken($secondary, 20%);
+        }
+    }
+
+
+}
