@@ -1,0 +1,13 @@
+<section ng-class="[ $ctrl.styles.todo, { done: $ctrl.todo.done } ]">
+
+	<div class="edit">
+		<input type="checkbox"
+			   ng-model="$ctrl.todo.done"
+			   ng-change="$ctrl.update($ctrl.todo)">
+		<editable text="$ctrl.todo.task"
+			      changed="$ctrl.updateName(text)">
+		</editable>
+		<button ng-click="$ctrl.remove($ctrl.todo.id)">X</button>
+	</div>
+	
+</section>
