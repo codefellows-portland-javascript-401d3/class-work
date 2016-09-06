@@ -1,0 +1,11 @@
+<span>
+	<span ng-hide="$ctrl.editing"
+		ng-click="$ctrl.edit()">{{$ctrl.text}}</span>
+
+	<span ng-show="$ctrl.editing">
+		<input ng-model="$ctrl.proposed"
+			ng-blur="$ctrl.editing && $ctrl.change()"
+			ng-keydown="$ctrl.keydown($event)">
+	</span>
+
+</span>

@@ -1,0 +1,16 @@
+<app-header>
+	<ui-view name="header"></ui-view>
+</app-header>
+
+
+<!--<span ng-click="app.goTo()">js way to navigate state</span>-->
+
+<main>
+	<ui-view name="main">
+		Loading...
+	</ui-view>
+</main>
+
+<footer>
+	{{ app.todos | json }}
+</footer>

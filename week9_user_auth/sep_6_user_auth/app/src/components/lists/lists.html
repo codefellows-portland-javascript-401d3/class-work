@@ -1,0 +1,14 @@
+<section>
+	<h4>Todo Lists {{$ctrl.display}}</h4>
+	<ul>
+		<li ng-repeat="list in $ctrl.lists">
+			<a ui-sref="list({ listId: list.id })">{{list.id}}-{{list.name}}</a>
+		</li>
+	</ul>
+	<add-new-item add="$ctrl.add(item)"></add-new-item>
+	<div ui-view>
+		select a list
+	</div>
+</section>
+
+

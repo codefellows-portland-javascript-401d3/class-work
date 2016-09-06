@@ -3,31 +3,31 @@
 itemService.$inject = [ '$http', 'apiUrl', '$cacheFactory' ];
 
 export default function itemService( $http, apiUrl, $cacheFactory ) {
-	const cache = $cacheFactory.get( '$http');
-		
-	return {
-		add( listId, item ) {
-			cache.remove( `${apiUrl}/todos/${listId}` );
+    const cache = $cacheFactory.get( '$http');
+    
+    return {
+        add( listId, item ) {
+            cache.remove( `${apiUrl}/todos/${listId}` );
 
-			return $http
-				.post( `${apiUrl}/todos/${listId}/items`, item )
-				.then( r => r.data );
-		},
-		update( listId, item ) {
-			cache.remove( `${apiUrl}/todos/${listId}` );
-			
-			return $http
-				.put( `${apiUrl}/todos/${listId}/items/${item.id}`, item )
-				.then( r => r.data );
-		},
-		remove( listId, id ) {
-			cache.remove( `${apiUrl}/todos/${listId}` );
-			
-			return $http
-				.delete( `${apiUrl}/todos/${listId}/items/${id}` )
-				.then( r => r.data );
-		}
-	};
+            return $http
+                .post( `${apiUrl}/todos/${listId}/items`, item )
+                .then( r => r.data );
+        },
+        update( listId, item ) {
+            cache.remove( `${apiUrl}/todos/${listId}` );
+            
+            return $http
+                .put( `${apiUrl}/todos/${listId}/items/${item.id}`, item )
+                .then( r => r.data );
+        },
+        remove( listId, id ) {
+            cache.remove( `${apiUrl}/todos/${listId}` );
+            
+            return $http
+                .delete( `${apiUrl}/todos/${listId}/items/${id}` )
+                .then( r => r.data );
+        }
+    };
 }
 
 /* Provider Example */

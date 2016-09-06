@@ -1,0 +1,33 @@
+@import 'colors';
+@import 'message';
+
+:local(.todo) {
+
+	$height: 30px;
+
+	position: relative;
+	height: $height;
+
+	footer {
+		position: absolute;
+		bottom: 0; left: 0; right: 0;
+		height: $height - 30px;
+		border: 1px solid $display-color;
+	}
+	
+	&.done {
+		text-decoration: line-through;
+	}
+
+	&:hover {
+		color: $hover-color;
+		cursor: pointer;
+	}
+
+	input {
+		font-family: sans-serif;
+		color: $display-color;
+	}
+}
+
+
