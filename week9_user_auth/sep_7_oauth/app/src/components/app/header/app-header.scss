@@ -1,0 +1,18 @@
+:local(.app-header) {
+
+	a {
+		color: steelblue;
+	}
+
+	a.active {
+		background: steelblue;
+		color: white;
+	}
+
+
+}
+	.displays {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}

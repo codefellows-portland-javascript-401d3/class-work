@@ -1,0 +1,15 @@
+@import 'colors';
+
+body {
+	color: $basic-color;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+a {
+	color: steelblue;
+}
+
+a.active {
+	background: steelblue;
+	color: white;
+}
